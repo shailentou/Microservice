@@ -13,7 +13,7 @@ public class License {
 	@Column(name = "license_id", nullable = false)
 	private String licenseId;
 
-	@Column(name = "produce_name", nullable = false)
+	@Column(name = "product_name", nullable = false)
 	private String productName;
 
 	@Column(name = "license_type", nullable = false)

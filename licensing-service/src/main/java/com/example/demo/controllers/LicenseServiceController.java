@@ -22,7 +22,7 @@ public class LicenseServiceController {
 	private LicenseService licenseService;
 
 	
-	 @RequestMapping(value="/tes",method = RequestMethod.GET)
+	/* @RequestMapping(value="/tes",method = RequestMethod.GET)
 	  //  public List<License> getLicenses( @PathVariable("organaizationId") String organizationId) {
 	  public List<License> getLicenses( ) {
 		 System.out.println("TESTS" +"dfdf");
@@ -30,22 +30,15 @@ public class LicenseServiceController {
 				 ("Seat").withOrganaizationId("sfs")
 					.withProductName("Teleco"));
 	    }
-	 
-/*	@RequestMapping(value = "/", method = RequestMethod.GET)
+	 */
+	@RequestMapping(value="/{licenseId}",method = RequestMethod.GET)
 	public License getLicenses(@PathVariable("organaizationId") String organaizationId,
 			@PathVariable("licenseId") String licenseId) {
-		System.out.println("TESTS" + organaizationId);
+		System.out.println("TESTS22" + organaizationId);
+		licenseService.getLicense(organaizationId, licenseId);
 		return new License().withLicenseId(licenseId).withLicenseType("Seat").withOrganaizationId(organaizationId)
 				.withProductName("Teleco");
-	}*/
-	/*
-	@RequestMapping(value = "{licenseId}", method = RequestMethod.GET)
-	public License getLicenses1() {
-		System.out.println("TESTS1" );
-		return new License().withLicenseId("sds").withLicenseType("Seat").withOrganaizationId
-				("ghjg")
-				.withProductName("Teleco");
-	}*/
+	}
 
 	@RequestMapping(value = "{licenseId}", method = RequestMethod.PUT)
 	public String updateLicenses(@PathVariable("licenseId") String licenseId) {
@@ -63,7 +56,7 @@ public class LicenseServiceController {
 				.withProductName("Teleco");
 		
 		licenseService.saveLicense(license);
-		return String.format("This is the post");
+		return String.format("This is the post 1"+ licenseId);
 	}
 
 	@RequestMapping(value = "{licenseId}", method = RequestMethod.DELETE)

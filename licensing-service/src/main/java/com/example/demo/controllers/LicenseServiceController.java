@@ -1,5 +1,8 @@
 package com.example.demo.controllers;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,13 +21,31 @@ public class LicenseServiceController {
 	@Autowired
 	private LicenseService licenseService;
 
-	@RequestMapping(value = "{licenseId}", method = RequestMethod.GET)
+	
+	 @RequestMapping(value="/tes",method = RequestMethod.GET)
+	  //  public List<License> getLicenses( @PathVariable("organaizationId") String organizationId) {
+	  public List<License> getLicenses( ) {
+		 System.out.println("TESTS" +"dfdf");
+		 return Arrays.asList( new License().withLicenseId("yrdy").withLicenseType
+				 ("Seat").withOrganaizationId("sfs")
+					.withProductName("Teleco"));
+	    }
+	 
+/*	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public License getLicenses(@PathVariable("organaizationId") String organaizationId,
 			@PathVariable("licenseId") String licenseId) {
 		System.out.println("TESTS" + organaizationId);
 		return new License().withLicenseId(licenseId).withLicenseType("Seat").withOrganaizationId(organaizationId)
 				.withProductName("Teleco");
-	}
+	}*/
+	/*
+	@RequestMapping(value = "{licenseId}", method = RequestMethod.GET)
+	public License getLicenses1() {
+		System.out.println("TESTS1" );
+		return new License().withLicenseId("sds").withLicenseType("Seat").withOrganaizationId
+				("ghjg")
+				.withProductName("Teleco");
+	}*/
 
 	@RequestMapping(value = "{licenseId}", method = RequestMethod.PUT)
 	public String updateLicenses(@PathVariable("licenseId") String licenseId) {

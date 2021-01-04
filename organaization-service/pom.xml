@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.shail</groupId>
-	<artifactId>organaizationservice</artifactId>
+	<artifactId>organizationservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>organaization-service</name>
+	<name>organization-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -30,7 +30,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+			<version>2.2.6.RELEASE</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -40,12 +44,8 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.2.17</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-			<version>2.2.6.RELEASE</version>
-		</dependency>
+
+
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -63,8 +63,8 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				</plugin>
-		
+			</plugin>
+
 		</plugins>
 	</build>
 

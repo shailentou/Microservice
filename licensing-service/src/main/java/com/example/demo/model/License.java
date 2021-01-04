@@ -46,11 +46,11 @@ public class License {
 		this.licenseType = licenseType;
 	}
 
-	public String getorganizationId() {
+	public String getOrganizationId() {
 		return organizationId;
 	}
 
-	public void setorganizationId(String organizationId) {
+	public void setOrganizationId(String organizationId) {
 		this.organizationId = organizationId;
 	}
 
@@ -70,8 +70,8 @@ public class License {
 		return this;
 	}
 
-	public License withorganizationId(String id) {
-		this.setorganizationId(id);
+	public License withOrganizationId(String id) {
+		this.setOrganizationId(id);
 		return this;
 	}
 }

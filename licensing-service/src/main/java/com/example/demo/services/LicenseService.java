@@ -19,12 +19,12 @@ public class LicenseService {
 	ServiceConfig config;
 	
 	public License getLicense(String organizationId, String licenseId) {
-		License license= licenseRepository.findByorganizationIdAndLicenseId(organizationId, licenseId);
+		License license= licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);
 		return license;
 	}
 	
 	public List<License> getLicenseByOrg(String organizationId, String licenseId) {
-		List<License> ls= licenseRepository.findByorganizationId(organizationId);
+		List<License> ls= licenseRepository.findByOrganizationId(organizationId);
 		return ls;
 	}
 	public void saveLicense(License license) {

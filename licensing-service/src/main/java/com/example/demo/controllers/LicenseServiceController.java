@@ -1,7 +1,5 @@
 package com.example.demo.controllers;
 
-import java.util.Arrays;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,7 +33,7 @@ public class LicenseServiceController {
 			@PathVariable("licenseId") String licenseId) {
 		System.out.println("TESTS22" + organizationId);
 		licenseService.getLicense(organizationId, licenseId);
-		return new License().withLicenseId(licenseId).withLicenseType("Seat").withorganizationId(organizationId)
+		return new License().withLicenseId(licenseId).withLicenseType("Seat").withOrganizationId(organizationId)
 				.withProductName("Teleco");
 	}
 

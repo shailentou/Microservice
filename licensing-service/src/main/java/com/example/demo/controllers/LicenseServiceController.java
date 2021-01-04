@@ -20,7 +20,7 @@ import com.example.demo.services.LicenseService;
 public class LicenseServiceController {
 
 	@Autowired
-	private LicenseService licenseService;
+	private LicenseService licenseService; 
 
 	/*
 	 * @RequestMapping(value="/tes",method = RequestMethod.GET) // public

@@ -29,11 +29,11 @@ public class OrganizationServiceController {
 	  }
 	 
 
-	/*
-	 * @RequestMapping(value="/{organizationId}",method = RequestMethod.GET) public
-	 * Optional<Organization> getOrganization( @PathVariable("organizationId")
-	 * String organizationId) { return orgService.getOrg(organizationId); }
-	 */
+	
+	  @RequestMapping(value="/{organizationId}",method = RequestMethod.GET) 
+	  public Optional<Organization> getOrganization( @PathVariable("organizationId")
+	  String organizationId) { return orgService.getOrg(organizationId); }
+	 
 
     @RequestMapping(value="/{organizationId}",method = RequestMethod.PUT)
     public void updateOrganization( @PathVariable("organizationId") String orgId, @RequestBody Organization org) {

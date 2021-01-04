@@ -42,4 +42,4 @@ public class OrganizationServiceController {
     public void deleteOrganization( @PathVariable("orgId") String orgId,  @RequestBody Organization org) {
         orgService.deleteOrg( org );
     }
-}
+} 

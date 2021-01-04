@@ -18,13 +18,13 @@ public class LicenseService {
 	@Autowired
 	ServiceConfig config;
 	
-	public License getLicense(String organaizationId, String licenseId) {
-		License license= licenseRepository.findByOrganaizationIdAndLicenseId(organaizationId, licenseId);
+	public License getLicense(String organizationId, String licenseId) {
+		License license= licenseRepository.findByorganizationIdAndLicenseId(organizationId, licenseId);
 		return license;
 	}
 	
-	public List<License> getLicenseByOrg(String organaizationId, String licenseId) {
-		List<License> ls= licenseRepository.findByOrganaizationId(organaizationId);
+	public List<License> getLicenseByOrg(String organizationId, String licenseId) {
+		List<License> ls= licenseRepository.findByorganizationId(organizationId);
 		return ls;
 	}
 	public void saveLicense(License license) {

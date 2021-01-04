@@ -16,7 +16,7 @@ import com.example.demo.model.License;
 import com.example.demo.services.LicenseService;
 
 @RestController
-@RequestMapping(value = "/v1/{organaizationId}/licenses")
+@RequestMapping(value = "/v1/{organizationId}/licenses")
 public class LicenseServiceController {
 
 	@Autowired
@@ -24,18 +24,18 @@ public class LicenseServiceController {
 
 	/*
 	 * @RequestMapping(value="/tes",method = RequestMethod.GET) // public
-	 * List<License> getLicenses( @PathVariable("organaizationId") String
+	 * List<License> getLicenses( @PathVariable("organizationId") String
 	 * organizationId) { public List<License> getLicenses( ) {
 	 * System.out.println("TESTS" +"dfdf"); return Arrays.asList( new
 	 * License().withLicenseId("yrdy").withLicenseType
-	 * ("Seat").withOrganaizationId("sfs") .withProductName("Teleco")); }
+	 * ("Seat").withorganizationId("sfs") .withProductName("Teleco")); }
 	 */
 	@RequestMapping(value = "/{licenseId}", method = RequestMethod.GET)
-	public License getLicenses(@PathVariable("organaizationId") String organaizationId,
+	public License getLicenses(@PathVariable("organizationId") String organizationId,
 			@PathVariable("licenseId") String licenseId) {
-		System.out.println("TESTS22" + organaizationId);
-		licenseService.getLicense(organaizationId, licenseId);
-		return new License().withLicenseId(licenseId).withLicenseType("Seat").withOrganaizationId(organaizationId)
+		System.out.println("TESTS22" + organizationId);
+		licenseService.getLicense(organizationId, licenseId);
+		return new License().withLicenseId(licenseId).withLicenseType("Seat").withorganizationId(organizationId)
 				.withProductName("Teleco");
 	}
 

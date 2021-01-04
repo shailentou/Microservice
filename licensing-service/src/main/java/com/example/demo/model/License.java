@@ -20,7 +20,7 @@ public class License {
 	private String licenseType;
 	
 	@Column(name = "organization_Id", nullable = false)
-	private String organaizationId;
+	private String organizationId;
 
 	public String getLicenseId() {
 		return licenseId;
@@ -46,12 +46,12 @@ public class License {
 		this.licenseType = licenseType;
 	}
 
-	public String getOrganaizationId() {
-		return organaizationId;
+	public String getorganizationId() {
+		return organizationId;
 	}
 
-	public void setOrganaizationId(String organaizationId) {
-		this.organaizationId = organaizationId;
+	public void setorganizationId(String organizationId) {
+		this.organizationId = organizationId;
 	}
 
 	public License withLicenseId(String id) {
@@ -70,8 +70,8 @@ public class License {
 		return this;
 	}
 
-	public License withOrganaizationId(String id) {
-		this.setOrganaizationId(id);
+	public License withorganizationId(String id) {
+		this.setorganizationId(id);
 		return this;
 	}
 }

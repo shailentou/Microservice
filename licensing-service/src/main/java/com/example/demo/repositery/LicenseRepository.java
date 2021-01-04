@@ -8,9 +8,9 @@ import com.example.demo.model.License;
 
 public interface LicenseRepository extends CrudRepository<License,String> {
 
-	public List<License> findByOrganaizationId(String organaizationId);
+	public List<License> findByorganizationId(String organizationId);
 	
-	public License findByOrganaizationIdAndLicenseId(String organaizationId,String licenseId);
+	public License findByorganizationIdAndLicenseId(String organizationId,String licenseId);
 	
 	public License findByLicenseId(String licenseId);
 	}

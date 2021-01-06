@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value="/test")
 public class TestController {
 
-	@Value("${example.property}")
-	String configprop;
+	
 	
 	@RequestMapping("/t1")
 	public String initTest()
 	{
-		System.out.println("in controller test" + configprop);
-		return "rest"+ "in controller test" + configprop;
+		System.out.println("in controller test" );
+		return "rest"+ "in controller test" ;
 	}
 }

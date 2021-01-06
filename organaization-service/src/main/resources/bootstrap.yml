@@ -1,10 +1,9 @@
 spring:
- application:    name: organizationservice
- 
-
-         
-    
-    
- profiles:  active: dev
+ application:
+    name: organizationservice
+ profiles:
+  active : dev
   
-  cloud:    config:      uri: http://localhost:8888          
+ cloud:
+  config:
+   uri: http://localhost:8888

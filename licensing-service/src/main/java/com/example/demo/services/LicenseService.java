@@ -5,7 +5,6 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.config.ServiceConfig;
 import com.example.demo.model.License;
 import com.example.demo.repositery.LicenseRepository;
 
@@ -15,8 +14,7 @@ public class LicenseService {
 	@Autowired
 	private LicenseRepository licenseRepository; 
 	
-	@Autowired
-	ServiceConfig config;
+	
 	
 	public License getLicense(String organizationId, String licenseId) {
 		License license= licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);

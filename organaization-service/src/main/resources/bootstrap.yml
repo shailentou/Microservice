@@ -1,6 +1,8 @@
 spring:
  application:
-    name: organizationservice
+   name: organizationservice
+    
+   
  profiles:
   active : dev
   

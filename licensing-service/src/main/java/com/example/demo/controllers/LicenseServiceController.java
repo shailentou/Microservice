@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.config.ServiceConfig;
 import com.example.demo.model.License;
 import com.example.demo.services.LicenseService;
 
@@ -20,6 +21,8 @@ public class LicenseServiceController {
 	@Autowired
 	private LicenseService licenseService;  
 
+	@Autowired
+    private ServiceConfig serviceConfig;
 	/*
 	 * @RequestMapping(value="/tes",method = RequestMethod.GET) // public
 	 * List<License> getLicenses( @PathVariable("organizationId") String

@@ -25,16 +25,27 @@ public class OrganizationServiceController {
 	  @RequestMapping(value="/",method = RequestMethod.GET) 
 	  public Optional<Organization> getOrganization() {
 		  System.out.println("aaaa");
-		  return orgService.getOrg("gfhg");
+		  return orgService.getOrg("100");
 	  }
 	 
 
-	
 	  @RequestMapping(value="/{organizationId}",method = RequestMethod.GET) 
 	  public Optional<Organization> getOrganization( @PathVariable("organizationId")
-	  String organizationId) { return orgService.getOrg(organizationId); }
+	  String organizationId) { 
+		//  Organi
+		   	Optional<Organization> org=		  orgService.getOrg(organizationId); 
+		  return org;
+			  }
 	 
-
+/*    
+    @RequestMapping(value="/{organizationId}",method = RequestMethod.GET) 
+	  public Organization getOrganization( @PathVariable("organizationId")
+	  String organizationId) { 
+		//  Organi
+		   	Organization org=		  orgService.getOrg(organizationId); 
+		  return org;
+			  }
+*/
     @RequestMapping(value="/{organizationId}",method = RequestMethod.PUT)
     public void updateOrganization( @PathVariable("organizationId") String orgId, @RequestBody Organization org) {
         orgService.updateOrg( org );

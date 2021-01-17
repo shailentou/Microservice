@@ -1,4 +1,4 @@
-package com.shail.organization.model;
+package com.example.demo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,7 +26,6 @@ public class Organization {
 
 
    
-
     public String getOrganizationId() {
 		return organizationId;
 	}

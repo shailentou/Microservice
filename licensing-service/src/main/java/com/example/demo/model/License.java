@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "licenses")
@@ -21,6 +22,19 @@ public class License {
 	
 	@Column(name = "organization_Id", nullable = false)
 	private String organizationId;
+	
+	@Transient
+	private String organizationName ="";
+
+	
+	
+	public String getOrganizationName() {
+		return organizationName;
+	}
+
+	public void setOrganizationName(String organizationName) {
+		this.organizationName = organizationName;
+	}
 
 	public String getLicenseId() {
 		return licenseId;

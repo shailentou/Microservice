@@ -1,11 +1,10 @@
 spring:
  application:
-   name: organizationservice
-    
-   
+    name: organizationservice
  profiles:
   active : dev
   
  cloud:
   config:
    uri: http://localhost:8888
+   
